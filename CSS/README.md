@@ -36,120 +36,127 @@ a[href="https://platzi.com/home"]
 
 1. **Selectores Basicos**
 
+   - Selector **de Tipo** `div{}`
 
-    - Selector **de Tipo** `div{}`
-    ```css
-    div {
-      color: red;
-    }
-    ```
-    - Selector **de Clase** `.elemento{}`
-    ```css
-    .elemnto {
-      color: white;
-    }
-    ```
-    - Selector **de ID** `#id-del-elemento{}`
-    ```css
-    #id {
-      color: green;
-    }
-    ```
-    - Selector **de Atributo** `a[href=""]{}`
-    ```css
-    a[href="https://youtube.com/home"]
-    {
-      color: pink;
-    }
-    ```
-    - Selector **Universal** `*{}`
-    ```css
-    * {
-      background: violet;
-    }
-    ```
+   ```css
+   div {
+     color: red;
+   }
+   ```
+
+   - Selector **de Clase** `.elemento{}`
+
+   ```css
+   .elemnto {
+     color: white;
+   }
+   ```
+
+   - Selector **de ID** `#id-del-elemento{}`
+
+   ```css
+   #id {
+     color: green;
+   }
+   ```
+
+   - Selector **de Atributo** `a[href=""]{}`
+
+   ```css
+   a[href="https://youtube.com/home"]
+   {
+     color: pink;
+   }
+   ```
+
+   - Selector **Universal** `*{}`
+
+   ```css
+   * {
+     background: violet;
+   }
+   ```
 
 2. **Selectores Combinadores**
 
+   - Selector **Descendiente** `div p`
 
-    - Selector **Descendiente** `div p`
+   ```css
+   div p {
+     color: red;
+   }
+   ```
 
-    ```css
-    div p {
-      color: red;
-    }
-    ```
+   - Selector **Hijo directo** `div > p`
 
-    - Selector **Hijo directo** `div > p`
+   ```css
+   div > div {
+     color: blue;
+   }
+   ```
 
-    ```css
-    div > div {
-      color: blue;
-    }
-    ```
+   - Selector **Elemento Adyacente** `div + p`
 
-    - Selector **Elemento Adyacente** `div + p`
+   ```css
+   div + section {
+     color: pink;
+   }
+   ```
 
-    ```css
-    div + section {
-      color: pink;
-    }
-    ```
+   - Selector **General de Hermanos** `div ~ p`
 
-    - Selector **General de Hermanos** `div ~ p`
+   ```css
+   div ~ p {
+     color: violet;
+   }
+   ```
 
-    ```css
-    div ~ p {
-      color: violet;
-    }
-    ```
+   **Ejemplo**
 
-    **Ejemplo**
-
-    ```css
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div p {
-        color: Lime;
-        }
-        div > div {
-        background: plum;
-        }
-        .es {
-        background: red;
-        }
-        div + section {
-        background: palevioletred;
-        }
-        div ~ p {
-        color: powderblue;
-        }
-    </style>
-    </head>
-    <body>
-    <div>
-        <div>
-        <p>Platzi</p>
-        <div class="es">Es</div>
-        </div>
-    </div>
-    <p>Clase de selectores</p>
-    <p>Clase de selectores</p>
-    <section>
-        Es lo mejor
-    </section>
-    <div>
-        Master
-    </div>
-    </body>
-    </html>
-    ```
+   ```css
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+       div p {
+       color: Lime;
+       }
+       div > div {
+       background: plum;
+       }
+       .es {
+       background: red;
+       }
+       div + section {
+       background: palevioletred;
+       }
+       div ~ p {
+       color: powderblue;
+       }
+   </style>
+   </head>
+   <body>
+   <div>
+       <div>
+       <p>Platzi</p>
+       <div class="es">Es</div>
+       </div>
+   </div>
+   <p>Clase de selectores</p>
+   <p>Clase de selectores</p>
+   <section>
+       Es lo mejor
+   </section>
+   <div>
+       Master
+   </div>
+   </body>
+   </html>
+   ```
 
 - **PSEUDOCLASES**  
   Las Pseudoclases nos permiten llegar a aquellas acciones que hace el usurario
@@ -286,7 +293,7 @@ Basicamente es el tipo de visualizacion que van a tener los elementos en HTML
   [Guia completa de GRID](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
 - **MODELO DE CAJAS**  
-  [El modelo de Cajas](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#cajas_en_bloque_y_en_l%C3%ADnea)  
+  [El modelo de Cajas](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#cajas_en_bloque_y_en_l%C3%ADnea)
 
 - **POSITION**  
   Las propiedade position en CSS especifican como un elemento es pocisionado en un documento  
@@ -301,3 +308,51 @@ Basicamente es el tipo de visualizacion que van a tener los elementos en HTML
 
 - **Unidades de Medida de CSS**  
   [unidades de medida](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units)
+
+- **Responsive Design**  
+  Hacer que un sitio se vea bien en varias medidas de pantalla para eso se usa las :  
+  **Media Queries**
+
+```css
+@media (min-width: 300px) {
+  div {
+    background: red;
+  }
+}
+```
+
+Tambien se puede aplicar con maximo
+
+```css
+@madia (max-width:500px) {
+  div {
+    background: blue;
+  }
+}
+```
+
+## METODOLOGIA
+
+---
+
+- **Metodoliga BEM**  
+  ¿Cómo funciona BEM?
+
+BEM funciona identificando el bloque, el elemento y el modificador de un componente.
+
+- **Bloque** es el contenedor principal del componente.
+- **Elemento** son las partes internas que conforman el componente.
+- **Modificador** son las variaciones del bloque o del elemento.
+
+Los nombres de clases con convención BEM,pueden tener la siguiente sintaxis:
+
+- [bloque]
+- [bloque]\_\_[elemento]
+- [bloque]--[modificador]
+- [elemento]--[modificador]
+- [bloque]\_\_[elemento]--[modificador]
+
+Importante: recuerda que:
+
+- Los guiones bajos (\_\_) se usan para separar el bloque del elemento,
+- Los guiones medios (--) se usan para separar el bloque o el elemento del modificador.
