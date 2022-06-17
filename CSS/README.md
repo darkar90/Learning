@@ -1,7 +1,10 @@
 # INICIO
 
-[Maqetacion de Css](#maquetacion-de-css)  
-[Diseño Resposivo](#diseño-responsivo)
+- [Maqetacion de Css](#maquetacion-de-css)
+- [Diseño Resposivo](#diseño-responsivo)
+- [Flexbox](#flexbox)
+- [Grid](#css-grid)
+- [Modelo de Caja](#modelo-de-cajas)
 
 ## Maquetacion de CSS
 
@@ -30,7 +33,7 @@ a[href="https://platzi.com/home"]
 }
 ```
 
-- **TIPOS DE SELECETORES**
+- **TIPOS DE SELECTORES**
 
 ---
 
@@ -159,14 +162,14 @@ a[href="https://platzi.com/home"]
    ```
 
 - **PSEUDOCLASES**  
-  Las Pseudoclases nos permiten llegar a aquellas acciones que hace el usurario
+  Las Pseudoclases nos permiten llegar a aquellas acciones que hace el usuario, define el estilo de un **estado** especial de un elemento
   - **:active**
   - **:focus**
   - **:hover**
   - **:nth-chlid**
 
 * **PSEUDOELEMENTOS**  
-  Son aquellos que nos permiten acceder a elementos de HTML que no son accesibles con otros selectores como por ejemplo la primera linea de un texto
+  Son aquellos que nos permiten acceder a elementos de HTML que no son accesibles con otros selectores como por ejemplo la primera linea de un texto, define el estiolo de una **parte** especifica de un elemento
   - **::after**
   - **::before**
   - **::first-letter**
@@ -224,11 +227,14 @@ a[href="https://platzi.com/home"]
 
 - **ESPECIFICIDAD**  
   Quienes prevalecen sobre quienes
-  1.  !important
-  2.  Estilos en lines
-  3.  #id
-  4.  clases, atributos y Pseudoclases
-  5.  Elementos y Pseudoelementos 6. Selectores Universales
+
+  | Selectores    | Especificidad |
+  | ------------- | ------------- |
+  | !important    | 1,0,0,0,0     |
+  | inline styles | 0,1,0,0,0     |
+  | #id           | 0,0,1,0,0     |
+  | .class        | 0,0,0,1,0     |
+  | tag           | 0,0,0,0,1     |
 
 [Especifidad-calculadora](https://specificity.keegan.st/)
 
@@ -286,14 +292,61 @@ Basicamente es el tipo de visualizacion que van a tener los elementos en HTML
 </html>
 ```
 
-- **FLEXBOX**  
-  [Guia completa de FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+## **FLEXBOX**
 
-- **CSS GRID**  
-  [Guia completa de GRID](https://css-tricks.com/snippets/css/complete-guide-grid/)
+[Guia completa de FlexBox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-- **MODELO DE CAJAS**  
-  [El modelo de Cajas](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#cajas_en_bloque_y_en_l%C3%ADnea)
+## **CSS GRID**
+
+[Guia completa de GRID](https://css-tricks.com/snippets/css/complete-guide-grid/)
+
+## **MODELO DE CAJAS**
+
+[El modelo de Cajas](https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model#cajas_en_bloque_y_en_l%C3%ADnea)
+
+[box-sizing](https://developer.mozilla.org/es/docs/Web/CSS/box-sizing)
+
+**Ejemplo**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+, initial-scale=1.0"
+    />
+    <title>Modelo de caja</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Soy un titulo</h1>
+        <div>
+          <p>Soy un parrafo</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+```
+
+```css
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+main {
+  width: 100%;
+  height: 500px;
+  border: 10px solid grey;
+  padding: 20px 35px;
+}
+```
 
 - **POSITION**  
   Las propiedade position en CSS especifican como un elemento es pocisionado en un documento  

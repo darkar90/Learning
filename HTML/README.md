@@ -190,6 +190,100 @@
 </body>
 ```
 
+- **Calendario**
+
+1. Forma corta
+
+```html
+    <form action="">
+      <label for= "calendario">
+        <span>Calendario<span>
+        <input type="datetime-local" id="calendario" name="calendario">
+      </label>
+      <input type="submit" />
+    </form>
+```
+
+2. Forma larga de una forma mas detallada
+
+```html
+<body>
+  <main>
+    <form action="">
+      <label for="nombre">
+        <span>¿Cual es tu nombre?</span>
+        <input
+          type="text"
+          name="nombre"
+          id="nombre"
+          autocomplete="name"
+          required
+        />
+      </label>
+      <label for="correo">
+        <span>¿Cual es tu email?</span>
+        <input
+          type="email"
+          name="correo"
+          id="correo"
+          autocomplete="email"
+          required
+        />
+      </label>
+      <label for="pais">
+        <span>¿Cual es tu pais?</span>
+        <input
+          type="text"
+          name="pais"
+          id="pais"
+          autocomplete="country"
+          required
+        />
+      </label>
+      <label for="cp">
+        <span>¿Cual es tu codigo postal?</span>
+        <input
+          type="text"
+          name="cp"
+          id="cp"
+          autocomplete="postal-code"
+          required
+        />
+      </label>
+      <input type="submit" />
+    </form>
+  </main>
+</body>
+```
+
+[Autocompletado atributo](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+
+- **Lista de Datos**  
+  El elemento HTML `<datalist>` contiene un conjunto de elementos `<option>` que representan los valores disponibles para otros controles.
+
+```html
+<body>
+  <main>
+    <input list="cursos" />
+    <datalist id="cursos">
+      <option value="JavaScript"></option>
+      <option value="HTML5"></option>
+      <option value="CSS3"></option>
+      <option value="Web Standards"></option>
+    </datalist>
+  </main>
+</body>
+```
+
+- **Input type submit vs Buttom tag**
+  - **Input** es mejor usarlo par formularios y **Buttom** para hacer botones personalizados
+  ```html
+  <body>
+    <input type="submit" value="Nombre" />
+    <button type="submit">Qué color te gusta?</button>
+  </body>
+  ```
+
 ## MAQUETACION
 
 ---
