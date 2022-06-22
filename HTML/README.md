@@ -238,4 +238,9 @@ forma 2
 </form>
 ```
 
-[Atributo autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)
+  [Atributo autocomplete](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete)  
+
+## Select  
+-----
+Para crear **inputs** con una lista de varias opciones, se puede desarrollar de 2 maneras diferentes:  
+  1. Etiqueta`<select>` esta permite crear una lista con las etiquetas `<option>`
