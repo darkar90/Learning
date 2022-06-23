@@ -15,6 +15,10 @@
   - [Etiqueta video](#etiqueta-video)  
 
 [FORMULARIOS](#formulario)  
+  - [Calendario](#calendario)  
+  - [Autocomplet y require](#autocomplete-y-require)  
+  - [Select](#select)  
+  - [Input type submit vs Button](#input-type-submit-vs-button)       
 
 # HTML
 
@@ -243,4 +247,35 @@ forma 2
 ## Select  
 -----
 Para crear **inputs** con una lista de varias opciones, se puede desarrollar de 2 maneras diferentes:  
-  1. Etiqueta`<select>` esta permite crear una lista con las etiquetas `<option>`
+  1. Etiqueta`<select>` esta permite crear una lista con las etiquetas `<option>`  
+
+``` html
+<select>
+  <option value="JavaScript">JavaScript</option>
+  <option value="HTML5">HTML5</option>
+  <option value="CSS3">CSS3</option>
+  <option value="Web_Standar">Web Standar</option>
+</select>
+ ```  
+ 2. **Etiqueta `<input list="">`**: De este modo se puede utilizar una etiqueta `<datalist>` con etiquetas `<option>` dentro del input.De este modo el usuario puede escribir dentro del input y filtrar los resultados de la lista    
+ ``` html
+ <input list="cursos"/>
+ <datalist>
+  <option value="JavaScript"></option>
+  <option value="HTML5"></option>
+  <option value="CSS3"></option>
+  <option value="Web_Standards"></option>
+ </datalist>
+ ```  
+ ## input type submit vs Button  
+ ----
+**input type submit** = Lo utilizaremos solo en los formularios   
+**Button** = Lo utilizaremos en cualquier otro tipo de boton dentro de nuestro proyecto  
+
+``` html
+<input type="submit" value="Nombre"/>  
+<!--Con el atributo value podemos cambiar el texto -->
+
+<button type="submit">Que color te gusta?</button>
+<!--si se quiere usar un button en un formulario se debe agragar el type="submit"-->
+```
