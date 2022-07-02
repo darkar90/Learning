@@ -1,12 +1,23 @@
-# TABLA DE INICIO  
+# TABLA DE CONTENIDO  
 
-[Pseudoclase y Pseudoelemento](#pseudo-clases-y-pseudo-elementos)  
-[Anatomia de un reglas CSS](#anatomia-de-una-regla-de-css)  
-[Modelo de caja](#modelo-de-la-caja)  
-[Hrenecia](#herencia)  
-[Especifidad con selectores](#especificidad-en-selectores)  
-[Combinadores](#combinadores)  
-[Medidas](#medidas)  
+[CSS]()  
+   - [Pseudoclase y Pseudoelemento](#pseudo-clases-y-pseudo-elementos)  
+   - [Anatomia de un reglas CSS](#anatomia-de-una-regla-de-css)  
+   - [Modelo de caja](#modelo-de-la-caja)  
+   - [Hrenecia](#herencia)  
+   - [Especifidad con selectores](#especificidad-en-selectores)  
+   - [Combinadores](#combinadores)  
+   - [Medidas](#medidas)   
+   - [Max/Min width](#maxmin-width)  
+   - [Position](#position)
+   - [Display](#display)  
+   - [Display flex](#display-flex)
+   - [Variables](#variables)
+   - [Web-fonts](#web-fonts)  
+
+[Responsive design](#responsive-design)  
+
+ 
 
 **CSS** significa **Cascading Stule Sheet** es la herramineta con el cual le damos estilo a las paginas  
 
@@ -354,4 +365,53 @@ section {
 
  - **static** : Cuando estamos en static no podemos usar el botton el left o el rigth  
 
- [Position](https://css-tricks.com/almanac/properties/p/position/)  
+ [Position](https://css-tricks.com/almanac/properties/p/position/)    
+
+ ## Display  
+ ----  
+ 1. Un elementod con **display : inline** no puede usar margin ni padding arriba ni abajo solo derecha e izquierda , tampoco se puede aplicar width o height  
+
+ 2. En un elemento con **display : block** el contenido del elemento toma el 100% del width, se puede usar margin y padding por todos los lados   
+
+ 3. En un elemento con **diplay : inline-block** , se puede usar margin y padding por todos los lados, asi como darle width y height, y el contenido es del mismo tamaño del elemento   
+
+ Nota: Etiqutas como `<p>` o `<div>` viene por default cono un **display : block** , etiquetas como `<span>` viene por default con un **display : inline**  
+
+ [display](https://developer.mozilla.org/es/docs/Web/CSS/display)
+
+ [Propiedades personalizadas](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)   
+
+ ## Display flex  
+ ----  
+**Flex** es un tipo de **diplay** que permite que el contenedor padre sea flexible a los cambios que pueda tener los elementos hijos en su alineacion   
+
+[flexbox](https://platzi.com/blog/flexbox-explicado-con-manzanitas/?gclid=EAIaIQobChMI-Yy3gcbJ-AIVo0JIAB1vawtQEAAYASAAEgIjh_D_BwE&gclsrc=aw.ds)  
+
+
+## Variables   
+----  
+Nos permite guardar valores que reiteradamente usaremos en el desarrollo del proyecto   
+
+[Variables](https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties)    
+
+## Web fonts  
+----  
+No es bueno cargar mas de una fuente externa lo ideal es que usemos solo una fuente   
+
+[fonts](https://fonts.google.com/)    
+
+<div align="right">
+  <small><a href="#tabla-de-contenido">volver al inicio</a></small>
+</div>
+
+## Responsive Design  
+----  
+Es mejor iniciar con las pantallas mas chicas usando el **Mobile First/Only** los **@media queries** por buenas practicas sipre tiene que ir al final      
+
+
+[responsive design](https://web.dev/learn/design/)
+    
+
+
+
+
